@@ -38,7 +38,7 @@ button = tk.Button(
 )
 
 
-# label для отображения времени на нажатие,
+# label for visible time,
 result_time = tk.Label(
     text="0.0s",
     foreground="green",
@@ -46,7 +46,7 @@ result_time = tk.Label(
 )
 
 
-# и label ждя отображения количества ошибок
+# label for mistakes
 fails = tk.Label(
     foreground="red",
     font=("Arial", 25),
@@ -54,12 +54,13 @@ fails = tk.Label(
 )
 
 
-# при помощи данного цикла мы просто добавляем все наши елементы в окно
+# add elements on the window
 for c in window.children:
     window.children[c].pack()
 
 
-counter = 0  # и определим переменную которая будет отвечать за количество ложных нажатий
+counter = 0
+# variable for mistaking pressing
 def loop():
     fails.config(
         text=f"{counter} Fails")
